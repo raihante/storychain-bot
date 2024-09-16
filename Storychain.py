@@ -45,9 +45,12 @@ start_color = (255, 250, 250)
 end_color = (128, 0, 128)
 
 def display_banner():
+    custom_fig = Figlet(font='slant')
+    if os.name == "nt":
+        custom_fig = Figlet(font='Stforek')
     os.system("title STORYCHAIN BOT" if os.name == "nt" else "clear")
     os.system("cls" if os.name == "nt" else "clear")
-    custom_fig = Figlet(font='Stforek')
+    
     print('')
     print_gradient_text(custom_fig.renderText('STORYCHAIN'), start_color, end_color)
     print(f"{Fore.RED}[#] [C] R E G E X{Fore.RESET}  |  {Fore.GREEN}[STORYCHAIN BOT] $${Fore.RESET}")
