@@ -25,7 +25,6 @@ AUTH_URL = 'https://api2.storychain.ai/telegram/auth'
 
 GLOBAL_HEADERS = {
     'Accept': 'application/json, text/plain, */*',
-    'Accept-Encoding': 'gzip, deflate, br, zstd',
     'Accept-Language': 'en-US,en;q=0.9',
     'Cache-Control': 'no-cache',
     'Origin': 'https://quests.storychain.ai',
@@ -192,7 +191,6 @@ def get_token_profile(initdata):
     payload = initdata
     headers = {
         'Accept': 'application/json, text/plain, */*',
-        'Accept-Encoding': 'gzip, deflate, br, zstd',
         'Accept-Language': 'en-US,en;q=0.9',
         'Cache-Control': 'no-cache',
         'Content-Length': str(len(payload)),
